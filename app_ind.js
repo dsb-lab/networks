@@ -463,10 +463,12 @@ var datasets = [
         "width" : 50.0,
         "background-color" : function(ele) {
           var node_degree = (ele.data('node_degree')-1)/7;
-          var redValue = Math.round(255 - (145 * node_degree));
-          var blueValue = Math.round(220 - (110 * node_degree));
-          return 'rgb(' + redValue + ',' + 0 + ',' + blueValue + ')';
+          var redValue = Math.round(230 - (80 * node_degree));
+          var blueValue = Math.round(240 - (110 * node_degree));
+          var greenValue = Math.round(200 - (180 * node_degree));
+          return 'rgb(' + redValue + ', ' + greenValue + ', ' + blueValue + ')';
         },
+        
         "border-opacity" : 1.0,
         "font-family" : "sans-serif",
         "font-weight" : "normal",
@@ -13004,10 +13006,10 @@ var datasets = [
         "background-opacity" : 1.0,
         "border-color" : "rgb(255,255,255)",
         "width" : 50.0,
-        "background-color" : function(ele) {
-          var node_degree = (ele.data('node_degree')-2000)/62;
-          var colorValue = Math.round(255 - (160 * node_degree));
-          return 'rgb(' + colorValue + ',' + Math.round(colorValue/2) + ',' + 20 + ')';
+        "background-color": function(ele) {
+          var node_degree = (ele.data('node_degree') - 2000) / 62;
+          var colorValue = Math.round(255 - (255 * node_degree));
+          return 'rgb(' + 255 + ',' + colorValue + ',' + colorValue + ')';
         },
         "border-opacity" : 1.0,
         "font-family" : "sans-serif",
@@ -77484,8 +77486,8 @@ var datasets = [
         "border-color" : "rgb(255,255,255)",
         "width" : 50.0,
         "background-color" : function(ele) {
-          var node_degree = (ele.data('node_degree')-3000)/104;
-          var redValue = Math.round(255 - (200 * node_degree));
+          var node_degree = (ele.data('node_degree')-3000)/140;
+          var redValue = Math.round(255 - (210 * node_degree));
           var greenValue = Math.round(170 - (100 * node_degree));
           var blueValue = Math.round(100 - (70 * node_degree));
           return 'rgb(' + redValue + ',' + greenValue + ',' + blueValue + ')';
@@ -89214,8 +89216,10 @@ var datasets = [
         "width" : 50.0,
         "background-color" : function(ele) {
           var node_degree = (ele.data('node_degree')-5000)/60;
-          var colorValue = Math.round(255 - (255 * node_degree));
-          return 'rgb(' + 255 + ',' + colorValue + ',' + colorValue + ')';
+          var redValue = Math.round(255 - (80 * node_degree));
+          var greenValue = Math.round(220 - (110 * node_degree));
+          var blueValue = Math.round(100 - (50 * node_degree));
+          return 'rgb(' + redValue + ',' + greenValue + ',' + blueValue + ')';
         },
         "border-opacity" : 1.0,
         "font-family" : "sans-serif",
@@ -90523,11 +90527,14 @@ var datasets = [
         "background-opacity" : 1.0,
         "border-color" : "rgb(255,255,255)",
         "width" : 50.0,
-        "background-color" : function(ele) {
-          var node_degree = (ele.data('node_degree')-4000)/12;
-          var colorValue = Math.round(255 - (155 * node_degree));
-          return 'rgb(' + colorValue + ',' + 185 + ',' + colorValue + ')';
-        },
+        "background-color": function(ele) {
+          var node_degree = (ele.data('node_degree') - 4000) / 12;
+          var redValue = Math.round(135 - (45 * node_degree));
+          var greenValue = Math.round(255 - (110 * node_degree));
+          var blueValue = Math.round(135 - (45 * node_degree));
+          return 'rgb(' + redValue + ',' + greenValue + ',' + blueValue + ')';
+        }
+        ,
         "border-opacity" : 1.0,
         "font-family" : "sans-serif",
         "font-weight" : "normal",
@@ -90597,6 +90604,16 @@ var layouts = [
     animate: true
   }
 ]
+
+// Define the legend
+var legend = document.createElement('div');
+legend.id = 'legend';
+legend.style.position = 'absolute';
+legend.style.bottom = '10px';
+legend.style.left = '10px';
+legend.style.width = '20px';
+legend.style.height = '150px';
+legend.style.background = 'linear-gradient(to bottom, #ccc 0%, #000 100%)';
 
 // Set the initial conditions to display
 var currentDataset = 0;
@@ -90673,6 +90690,7 @@ function loadDataset(index, index_layout) {
     var layout = layouts[index_layout];
     cy.layout(layout).run();
   }
+  cy.container().appendChild(legend);
   return cy;
 }
 
