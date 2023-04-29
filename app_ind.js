@@ -459,24 +459,57 @@ var datasets = [
         "height" : 50.0,
         "font-size" : 8,
         "background-opacity" : 1.0,
-        "border-color" : "rgb(255,255,255)",
         "width" : 50.0,
         "background-color" : function(ele) {
-          var node_degree = (ele.data('node_degree')-1)/7;
-          var redValue = Math.round(230 - (80 * node_degree));
-          var blueValue = Math.round(240 - (110 * node_degree));
-          var greenValue = Math.round(200 - (180 * node_degree));
-          return 'rgb(' + redValue + ', ' + greenValue + ', ' + blueValue + ')';
+          var node_degree = ele.data('node_degree')/6;
+          var baseColor = [164, 48, 182];
+          var colorValue = Math.floor((1-node_degree) * 255);
+            // Crea el gradiente de color utilizando el valor de color calculado
+            var redValue = baseColor[0] + colorValue;
+            var greenValue = baseColor[1] + colorValue;
+            var blueValue = baseColor[2] + colorValue;
+            // Asegura que los valores RGB estén dentro del rango válido de 0 a 255
+            redValue = Math.max(0, redValue);
+            greenValue = Math.max(0, greenValue);
+            blueValue = Math.max(0, blueValue);
+            redValue = Math.min(255, redValue);
+            greenValue = Math.min(255, greenValue);
+            blueValue = Math.min(255, blueValue);
+            return 'rgb(' + redValue + ',' + greenValue + ',' + blueValue + ')';
         },
-        
+        "border-color" : function(ele) {
+          var backgroundColor = ele.css("background-color");
+          var rgbArray = backgroundColor.match(/\d+/g);
+          var r = parseInt(rgbArray[0]);
+          var g = parseInt(rgbArray[1]);
+          var b = parseInt(rgbArray[2]);
+          var brightness = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+          if (brightness > 125) {
+            return '#000000';
+          } else {
+            return '#ffffff';
+          }
+        },
         "border-opacity" : 1.0,
         "font-family" : "sans-serif",
-        "font-weight" : "normal",
+        "font-weight" : "bold",
         "text-valign" : "center",
         "text-halign" : "center",
         "text-wrap": "wrap",
         "text-max-width": 50.0,
-        "color" : "rgb(37,37,37)",
+        "color": function(ele) {
+          var backgroundColor = ele.css("background-color");
+          var rgbArray = backgroundColor.match(/\d+/g);
+          var r = parseInt(rgbArray[0]);
+          var g = parseInt(rgbArray[1]);
+          var b = parseInt(rgbArray[2]);
+          var brightness = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+          if (brightness > 125) {
+            return '#000000';
+          } else {
+            return '#ffffff';
+          }
+        },
         "text-opacity" : 1.0,
         "shape" : "ellipse",
         "content" : "data(name)"
@@ -501,7 +534,10 @@ var datasets = [
         "source-arrow-shape" : "none",
         "line-color" : function(ele) {
           var weight = ele.data('weight');
-          return 'rgb(' + Math.round(255 * (1-weight)) + ',' + Math.round(255 * (1-weight)) + ',' + Math.round(255 * (1-weight)) + ')';
+          var colorValue = Math.round(255 * (1-weight));
+            colorValue = Math.max(0, colorValue);
+            colorValue = Math.min(255, colorValue);
+            return 'rgb(' + colorValue + ',' + colorValue + ',' + colorValue + ')';
         },
         "width" : 1.0,
         "content" : "",
@@ -1661,21 +1697,57 @@ var datasets = [
         "height" : 50.0,
         "font-size" : 8,
         "background-opacity" : 1.0,
-        "border-color" : "rgb(255,255,255)",
         "width" : 50.0,
         "background-color" : function(ele) {
-          var node_degree = (ele.data('node_degree')-1000)/17;
-          var colorValue = Math.round(255 - (155 * node_degree));
-          return 'rgb(' + colorValue + ',' + colorValue + ',' + 255 + ')';
+          var node_degree = (ele.data('node_degree')-1000)/10;
+          var baseColor = [47, 180, 47];
+          var colorValue = Math.floor((1-node_degree) * 255);
+          // Crea el gradiente de color utilizando el valor de color calculado
+          var redValue = baseColor[0] + colorValue;
+          var greenValue = baseColor[1] + colorValue;
+          var blueValue = baseColor[2] + colorValue;
+          // Asegura que los valores RGB estén dentro del rango válido de 0 a 255
+          redValue = Math.max(0, redValue);
+          greenValue = Math.max(0, greenValue);
+          blueValue = Math.max(0, blueValue);
+          redValue = Math.min(255, redValue);
+          greenValue = Math.min(255, greenValue);
+          blueValue = Math.min(255, blueValue);
+          return 'rgb(' + redValue + ',' + greenValue + ',' + blueValue + ')';
         },
         "border-opacity" : 1.0,
+        "border-color" : function(ele) {
+          var backgroundColor = ele.css("background-color");
+          var rgbArray = backgroundColor.match(/\d+/g);
+          var r = parseInt(rgbArray[0]);
+          var g = parseInt(rgbArray[1]);
+          var b = parseInt(rgbArray[2]);
+          var brightness = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+          if (brightness > 125) {
+            return '#000000';
+          } else {
+            return '#ffffff';
+          }
+        },
         "font-family" : "sans-serif",
-        "font-weight" : "normal",
+        "font-weight" : "bold",
         "text-valign" : "center",
         "text-halign" : "center",
         "text-wrap": "wrap",
         "text-max-width": 50.0,
-        "color" : "rgb(37,37,37)",
+        "color": function(ele) {
+          var backgroundColor = ele.css("background-color");
+          var rgbArray = backgroundColor.match(/\d+/g);
+          var r = parseInt(rgbArray[0]);
+          var g = parseInt(rgbArray[1]);
+          var b = parseInt(rgbArray[2]);
+          var brightness = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+          if (brightness > 125) {
+            return '#000000';
+          } else {
+            return '#ffffff';
+          }
+        },
         "text-opacity" : 1.0,
         "shape" : "ellipse",
         "content" : "data(name)"
@@ -13004,21 +13076,57 @@ var datasets = [
         "height" : 50.0,
         "font-size" : 7,
         "background-opacity" : 1.0,
-        "border-color" : "rgb(255,255,255)",
         "width" : 50.0,
         "background-color": function(ele) {
-          var node_degree = (ele.data('node_degree') - 2000) / 62;
-          var colorValue = Math.round(255 - (255 * node_degree));
-          return 'rgb(' + 255 + ',' + colorValue + ',' + colorValue + ')';
+          var node_degree = (ele.data('node_degree')-2000)/40;
+          var baseColor = [180, 0, 0];
+          var colorValue = Math.floor((1-node_degree) * 255);
+          // Crea el gradiente de color utilizando el valor de color calculado
+          var redValue = baseColor[0] + colorValue;
+          var greenValue = baseColor[1] + colorValue;
+          var blueValue = baseColor[2] + colorValue;
+          // Asegura que los valores RGB estén dentro del rango válido de 0 a 255
+          redValue = Math.max(0, redValue);
+          greenValue = Math.max(0, greenValue);
+          blueValue = Math.max(0, blueValue);
+          redValue = Math.min(255, redValue);
+          greenValue = Math.min(255, greenValue);
+          blueValue = Math.min(255, blueValue);
+          return 'rgb(' + redValue + ',' + greenValue + ',' + blueValue + ')';
         },
         "border-opacity" : 1.0,
+        "border-color" : function(ele) {
+          var backgroundColor = ele.css("background-color");
+          var rgbArray = backgroundColor.match(/\d+/g);
+          var r = parseInt(rgbArray[0]);
+          var g = parseInt(rgbArray[1]);
+          var b = parseInt(rgbArray[2]);
+          var brightness = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+          if (brightness > 125) {
+            return '#000000';
+          } else {
+            return '#ffffff';
+          }
+        },
         "font-family" : "sans-serif",
-        "font-weight" : "normal",
+        "font-weight" : "bold",
         "text-valign" : "center",
         "text-halign" : "center",
         "text-wrap": "wrap",
         "text-max-width": 50.0,
-        "color" : "rgb(37,37,37)",
+        "color": function(ele) {
+          var backgroundColor = ele.css("background-color");
+          var rgbArray = backgroundColor.match(/\d+/g);
+          var r = parseInt(rgbArray[0]);
+          var g = parseInt(rgbArray[1]);
+          var b = parseInt(rgbArray[2]);
+          var brightness = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+          if (brightness > 125) {
+            return '#000000';
+          } else {
+            return '#ffffff';
+          }
+        },
         "text-opacity" : 1.0,
         "shape" : "ellipse",
         "content" : "data(name)"
@@ -77483,23 +77591,57 @@ var datasets = [
         "height" : 50.0,
         "font-size" : 8,
         "background-opacity" : 1.0,
-        "border-color" : "rgb(255,255,255)",
         "width" : 50.0,
         "background-color" : function(ele) {
-          var node_degree = (ele.data('node_degree')-3000)/140;
-          var redValue = Math.round(255 - (210 * node_degree));
-          var greenValue = Math.round(170 - (100 * node_degree));
-          var blueValue = Math.round(100 - (70 * node_degree));
+          var node_degree = (ele.data('node_degree')-3000)/97;
+          var baseColor = [255, 128, 0];
+          var colorValue = Math.floor((1-node_degree) * 255);
+          // Crea el gradiente de color utilizando el valor de color calculado
+          var redValue = baseColor[0] + colorValue;
+          var greenValue = baseColor[1] + colorValue;
+          var blueValue = baseColor[2] + colorValue;
+          // Asegura que los valores RGB estén dentro del rango válido de 0 a 255
+          redValue = Math.max(0, redValue);
+          greenValue = Math.max(0, greenValue);
+          blueValue = Math.max(0, blueValue);
+          redValue = Math.min(255, redValue);
+          greenValue = Math.min(255, greenValue);
+          blueValue = Math.min(255, blueValue);
           return 'rgb(' + redValue + ',' + greenValue + ',' + blueValue + ')';
         },
         "border-opacity" : 1.0,
+        "border-color" : function(ele) {
+          var backgroundColor = ele.css("background-color");
+          var rgbArray = backgroundColor.match(/\d+/g);
+          var r = parseInt(rgbArray[0]);
+          var g = parseInt(rgbArray[1]);
+          var b = parseInt(rgbArray[2]);
+          var brightness = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+          if (brightness > 125) {
+            return '#000000';
+          } else {
+            return '#ffffff';
+          }
+        },
         "font-family" : "sans-serif",
-        "font-weight" : "normal",
+        "font-weight" : "bold",
         "text-valign" : "center",
         "text-halign" : "center",
         "text-wrap": "wrap",
         "text-max-width": 50.0,
-        "color" : "rgb(37,37,37)",
+        "color": function(ele) {
+          var backgroundColor = ele.css("background-color");
+          var rgbArray = backgroundColor.match(/\d+/g);
+          var r = parseInt(rgbArray[0]);
+          var g = parseInt(rgbArray[1]);
+          var b = parseInt(rgbArray[2]);
+          var brightness = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+          if (brightness > 125) {
+            return '#000000';
+          } else {
+            return '#ffffff';
+          }
+        },
         "text-opacity" : 1.0,
         "shape" : "ellipse",
         "content" : "data(name)"
@@ -89212,23 +89354,57 @@ var datasets = [
         "height" : 50.0,
         "font-size" : 8,
         "background-opacity" : 1.0,
-        "border-color" : "rgb(255,255,255)",
         "width" : 50.0,
         "background-color" : function(ele) {
-          var node_degree = (ele.data('node_degree')-5000)/60;
-          var redValue = Math.round(255 - (80 * node_degree));
-          var greenValue = Math.round(220 - (110 * node_degree));
-          var blueValue = Math.round(100 - (50 * node_degree));
+          var node_degree = (ele.data('node_degree')-5000)/39;
+          var baseColor = [159, 162, 54];
+          var colorValue = Math.floor((1-node_degree) * 255);
+          // Crea el gradiente de color utilizando el valor de color calculado
+          var redValue = baseColor[0] + colorValue;
+          var greenValue = baseColor[1] + colorValue;
+          var blueValue = baseColor[2] + colorValue;
+          // Asegura que los valores RGB estén dentro del rango válido de 0 a 255
+          redValue = Math.max(0, redValue);
+          greenValue = Math.max(0, greenValue);
+          blueValue = Math.max(0, blueValue);
+          redValue = Math.min(255, redValue);
+          greenValue = Math.min(255, greenValue);
+          blueValue = Math.min(255, blueValue);
           return 'rgb(' + redValue + ',' + greenValue + ',' + blueValue + ')';
         },
         "border-opacity" : 1.0,
+        "border-color" : function(ele) {
+          var backgroundColor = ele.css("background-color");
+          var rgbArray = backgroundColor.match(/\d+/g);
+          var r = parseInt(rgbArray[0]);
+          var g = parseInt(rgbArray[1]);
+          var b = parseInt(rgbArray[2]);
+          var brightness = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+          if (brightness > 125) {
+            return '#000000';
+          } else {
+            return '#ffffff';
+          }
+        },
         "font-family" : "sans-serif",
-        "font-weight" : "normal",
+        "font-weight" : "bold",
         "text-valign" : "center",
         "text-halign" : "center",
         "text-wrap": "wrap",
         "text-max-width": 50.0,
-        "color" : "rgb(37,37,37)",
+        "color": function(ele) {
+          var backgroundColor = ele.css("background-color");
+          var rgbArray = backgroundColor.match(/\d+/g);
+          var r = parseInt(rgbArray[0]);
+          var g = parseInt(rgbArray[1]);
+          var b = parseInt(rgbArray[2]);
+          var brightness = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+          if (brightness > 125) {
+            return '#000000';
+          } else {
+            return '#ffffff';
+          }
+        },
         "text-opacity" : 1.0,
         "shape" : "ellipse",
         "content" : "data(name)"
@@ -90525,24 +90701,57 @@ var datasets = [
         "height" : 50.0,
         "font-size" : 8,
         "background-opacity" : 1.0,
-        "border-color" : "rgb(255,255,255)",
         "width" : 50.0,
         "background-color": function(ele) {
-          var node_degree = (ele.data('node_degree') - 4000) / 12;
-          var redValue = Math.round(135 - (45 * node_degree));
-          var greenValue = Math.round(255 - (110 * node_degree));
-          var blueValue = Math.round(135 - (45 * node_degree));
+          var node_degree = (ele.data('node_degree')-4000)/11;
+          var baseColor = [47, 47, 180];
+          var colorValue = Math.floor((1-node_degree) * 255);
+          // Crea el gradiente de color utilizando el valor de color calculado
+          var redValue = baseColor[0] + colorValue;
+          var greenValue = baseColor[1] + colorValue;
+          var blueValue = baseColor[2] + colorValue;
+          // Asegura que los valores RGB estén dentro del rango válido de 0 a 255
+          redValue = Math.max(0, redValue);
+          greenValue = Math.max(0, greenValue);
+          blueValue = Math.max(0, blueValue);
+          redValue = Math.min(255, redValue);
+          greenValue = Math.min(255, greenValue);
+          blueValue = Math.min(255, blueValue);
           return 'rgb(' + redValue + ',' + greenValue + ',' + blueValue + ')';
-        }
-        ,
+        },
         "border-opacity" : 1.0,
+        "border-color" : function(ele) {
+            var backgroundColor = ele.css("background-color");
+            var rgbArray = backgroundColor.match(/\d+/g);
+            var r = parseInt(rgbArray[0]);
+            var g = parseInt(rgbArray[1]);
+            var b = parseInt(rgbArray[2]);
+            var brightness = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+            if (brightness > 125) {
+              return '#000000';
+            } else {
+              return '#ffffff';
+            }
+          },
         "font-family" : "sans-serif",
-        "font-weight" : "normal",
+        "font-weight" : "bold",
         "text-valign" : "center",
         "text-halign" : "center",
         "text-wrap": "wrap",
         "text-max-width": 50.0,
-        "color" : "rgb(37,37,37)",
+        "color": function(ele) {
+          var backgroundColor = ele.css("background-color");
+          var rgbArray = backgroundColor.match(/\d+/g);
+          var r = parseInt(rgbArray[0]);
+          var g = parseInt(rgbArray[1]);
+          var b = parseInt(rgbArray[2]);
+          var brightness = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+          if (brightness > 125) {
+            return '#000000';
+          } else {
+            return '#ffffff';
+          }
+        },
         "text-opacity" : 1.0,
         "shape" : "ellipse",
         "content" : "data(name)"
