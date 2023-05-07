@@ -462,7 +462,7 @@ var datasets = [
         "width" : 50.0,
         "background-color" : function(ele) {
           var node_degree = ele.data('node_degree')/6;
-          var baseColor = [164, 48, 182];
+          var baseColor = [144, 28, 162];
           var colorValue = Math.floor((1-node_degree) * 255);
             // Crea el gradiente de color utilizando el valor de color calculado
             var redValue = baseColor[0] + colorValue;
@@ -1700,7 +1700,7 @@ var datasets = [
         "width" : 50.0,
         "background-color" : function(ele) {
           var node_degree = (ele.data('node_degree')-1000)/10;
-          var baseColor = [47, 180, 47];
+          var baseColor = [7, 140, 7];
           var colorValue = Math.floor((1-node_degree) * 255);
           // Crea el gradiente de color utilizando el valor de color calculado
           var redValue = baseColor[0] + colorValue;
@@ -77594,7 +77594,7 @@ var datasets = [
         "width" : 50.0,
         "background-color" : function(ele) {
           var node_degree = (ele.data('node_degree')-3000)/97;
-          var baseColor = [255, 128, 0];
+          var baseColor = [5, 68, 70];
           var colorValue = Math.floor((1-node_degree) * 255);
           // Crea el gradiente de color utilizando el valor de color calculado
           var redValue = baseColor[0] + colorValue;
@@ -89357,7 +89357,7 @@ var datasets = [
         "width" : 50.0,
         "background-color" : function(ele) {
           var node_degree = (ele.data('node_degree')-5000)/39;
-          var baseColor = [159, 162, 54];
+          var baseColor = [109, 112, 4];
           var colorValue = Math.floor((1-node_degree) * 255);
           // Crea el gradiente de color utilizando el valor de color calculado
           var redValue = baseColor[0] + colorValue;
@@ -90704,7 +90704,7 @@ var datasets = [
         "width" : 50.0,
         "background-color": function(ele) {
           var node_degree = (ele.data('node_degree')-4000)/11;
-          var baseColor = [47, 47, 180];
+          var baseColor = [87, 87, 220];
           var colorValue = Math.floor((1-node_degree) * 255);
           // Crea el gradiente de color utilizando el valor de color calculado
           var redValue = baseColor[0] + colorValue;
@@ -90818,11 +90818,11 @@ var layouts = [
 var legend = document.createElement('div');
 legend.id = 'legend';
 legend.style.position = 'absolute';
-legend.style.bottom = '10px';
-legend.style.left = '10px';
+legend.style.top = '10px';
+legend.style.right = '10px';
 legend.style.width = '20px';
 legend.style.height = '150px';
-legend.style.background = 'linear-gradient(to bottom, #ccc 0%, #000 100%)';
+legend.style.background = 'linear-gradient(to bottom, #000 0%, #ccc 100%)';
 
 // Set the initial conditions to display
 var currentDataset = 0;
