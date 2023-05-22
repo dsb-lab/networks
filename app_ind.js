@@ -4,6 +4,44 @@ var datasets = [
   {
     "nodes" : [ {
       "data" : {
+        "id" : "41882",
+        "shared_name" : "Node 3",
+        "name" : "Node\nDegree",
+        "SUID" : 41882,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -137.8998313026389,
+        "y" : -27.68465002029137
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "41877",
+        "shared_name" : "Node 2",
+        "name" : "6\n\n\n\n\n\n\n\n\n\n\n0",
+        "SUID" : 41877,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -155.8828597593435,
+        "y" : 33.37591626413282
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "41872",
+        "shared_name" : "Node 1",
+        "SUID" : 41872,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -139.85674810409546,
+        "y" : 33.07438921928406
+      },
+      "selected" : false
+    }, {
+      "data" : {
         "id" : "10127",
         "shared_name" : "APOE_A1",
         "name" : "APOE_A1",
@@ -515,6 +553,37 @@ var datasets = [
         "content" : "data(name)"
       }
     }, {
+      "selector" : "node[ id = '41872' ]",
+      "css" : {
+        'background-gradient-stop-colors': 'rgb(144,28,162) rgb(255,255,255)',
+        'background-gradient-direction': 'to-bottom',
+        'background-fill': 'linear-gradient',
+        "border-color" : "rgb(255,255,255)",
+        "height" : 100.0,
+        "width" : 20.0,
+        "shape" : "rectangle"
+      }
+    }, {
+      "selector" : "node[ id = '41877' ]",
+      "css" : {
+        "background-color" : "rgb(255,255,255)",
+        "border-color" : "rgb(255,255,255)",
+        "font-size" : 8,
+        "font-weight" : "normal",
+        "height" : 100.0,
+        "width" : 20.0,
+        "shape" : "rectangle"
+      }
+    }, {
+      "selector" : "node[ id = '41882' ]",
+      "css" : {
+        "background-color" : "rgb(255,255,255)",
+        "border-color" : "rgb(255,255,255)",
+        "font-size" : 8,
+        "font-weight" : "normal",
+        "shape" : "rectangle"
+      }
+    }, {
       "selector" : "node:selected",
       "css" : {
         "background-color" : "rgb(255,255,0)"
@@ -553,6 +622,44 @@ var datasets = [
   // MOLECULAR
   {
     "nodes" : [ {
+      "data" : {
+        "id" : "41882",
+        "shared_name" : "Node 3",
+        "name" : "Node\nDegree",
+        "SUID" : 41882,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -187.8998313026389,
+        "y" : -32.68465002029137
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "41877",
+        "shared_name" : "Node 2",
+        "name" : "10\n\n\n\n\n\n\n\n\n0",
+        "SUID" : 41877,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -210.8828597593435,
+        "y" : 33.37591626413282
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "41872",
+        "shared_name" : "Node 1",
+        "SUID" : 41872,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -189.85674810409546,
+        "y" : 33.07438921928406
+      },
+      "selected" : false
+    }, {
       "data" : {
         "id" : "9937",
         "shared_name" : "EUR_AB42",
@@ -1753,6 +1860,37 @@ var datasets = [
         "content" : "data(name)"
       }
     }, {
+      "selector" : "node[ id = '41872' ]",
+      "css" : {
+        'background-gradient-stop-colors': 'rgb(7,140,7) rgb(255,255,255)',
+        'background-gradient-direction': 'to-bottom',
+        'background-fill': 'linear-gradient',
+        "border-color" : "rgb(255,255,255)",
+        "height" : 100.0,
+        "width" : 20.0,
+        "shape" : "rectangle"
+      }
+    }, {
+      "selector" : "node[ id = '41877' ]",
+      "css" : {
+        "background-color" : "rgb(255,255,255)",
+        "border-color" : "rgb(255,255,255)",
+        "font-size" : 10,
+        "font-weight" : "normal",
+        "height" : 100.0,
+        "width" : 20.0,
+        "shape" : "rectangle"
+      }
+    }, {
+      "selector" : "node[ id = '41882' ]",
+      "css" : {
+        "background-color" : "rgb(255,255,255)",
+        "border-color" : "rgb(255,255,255)",
+        "font-size" : 10,
+        "font-weight" : "normal",
+        "shape" : "rectangle"
+      }
+    }, {
       "selector" : "node:selected",
       "css" : {
         "background-color" : "rgb(255,255,0)"
@@ -1788,6 +1926,44 @@ var datasets = [
   // PET
   {
     "nodes" : [ {
+      "data" : {
+        "id" : "41882",
+        "shared_name" : "Node 3",
+        "name" : "Node\nDegree",
+        "SUID" : 41882,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -307.8998313026389,
+        "y" : -55.68465002029137
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "41877",
+        "shared_name" : "Node 2",
+        "name" : "40\n\n\n\n\n\n\n\n\n0",
+        "SUID" : 41877,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -341.8828597593435,
+        "y" : 43.37591626413282
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "41872",
+        "shared_name" : "Node 1",
+        "SUID" : 41872,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -309.85674810409546,
+        "y" : 43.07438921928406
+      },
+      "selected" : false
+    }, {
       "data" : {
         "id" : "10361",
         "shared_name" : "SROI_FDG",
@@ -13132,6 +13308,37 @@ var datasets = [
         "content" : "data(name)"
       }
     }, {
+      "selector" : "node[ id = '41872' ]",
+      "css" : {
+        'background-gradient-stop-colors': 'rgb(180,0,0) rgb(255,255,255)',
+        'background-gradient-direction': 'to-bottom',
+        'background-fill': 'linear-gradient',
+        "border-color" : "rgb(255,255,255)",
+        "height" : 150.0,
+        "width" : 30.0,
+        "shape" : "rectangle"
+      }
+    }, {
+      "selector" : "node[ id = '41877' ]",
+      "css" : {
+        "background-color" : "rgb(255,255,255)",
+        "border-color" : "rgb(255,255,255)",
+        "font-size" : 15,
+        "font-weight" : "normal",
+        "height" : 150.0,
+        "width" : 30.0,
+        "shape" : "rectangle"
+      }
+    }, {
+      "selector" : "node[ id = '41882' ]",
+      "css" : {
+        "background-color" : "rgb(255,255,255)",
+        "border-color" : "rgb(255,255,255)",
+        "font-size" : 15,
+        "font-weight" : "normal",
+        "shape" : "rectangle"
+      }
+    }, {
       "selector" : "node:selected",
       "css" : {
         "background-color" : "rgb(255,255,0)"
@@ -13167,6 +13374,44 @@ var datasets = [
   // MRI
   {
     "nodes" : [ {
+      "data" : {
+        "id" : "41882",
+        "shared_name" : "Node 3",
+        "name" : "Node\nDegree",
+        "SUID" : 41882,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -327.8998313026389,
+        "y" : -25.68465002029137
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "41877",
+        "shared_name" : "Node 2",
+        "name" : "97\n\n\n\n\n\n\n\n\n0",
+        "SUID" : 41877,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -361.8828597593435,
+        "y" : 73.37591626413282
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "41872",
+        "shared_name" : "Node 1",
+        "SUID" : 41872,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -329.85674810409546,
+        "y" : 73.07438921928406
+      },
+      "selected" : false
+    }, {
       "data" : {
         "id" : "465",
         "shared_name" : "ST99TS",
@@ -77647,6 +77892,37 @@ var datasets = [
         "content" : "data(name)"
       }
     }, {
+      "selector" : "node[ id = '41872' ]",
+      "css" : {
+        'background-gradient-stop-colors': 'rgb(5,68,70) rgb(255,255,255)',
+        'background-gradient-direction': 'to-bottom',
+        'background-fill': 'linear-gradient',
+        "border-color" : "rgb(255,255,255)",
+        "height" : 150.0,
+        "width" : 30.0,
+        "shape" : "rectangle"
+      }
+    }, {
+      "selector" : "node[ id = '41877' ]",
+      "css" : {
+        "background-color" : "rgb(255,255,255)",
+        "border-color" : "rgb(255,255,255)",
+        "font-size" : 15,
+        "font-weight" : "normal",
+        "height" : 150.0,
+        "width" : 30.0,
+        "shape" : "rectangle"
+      }
+    }, {
+      "selector" : "node[ id = '41882' ]",
+      "css" : {
+        "background-color" : "rgb(255,255,255)",
+        "border-color" : "rgb(255,255,255)",
+        "font-size" : 15,
+        "font-weight" : "normal",
+        "shape" : "rectangle"
+      }
+    }, {
       "selector" : "node:selected",
       "css" : {
         "background-color" : "rgb(255,255,0)"
@@ -77682,6 +77958,44 @@ var datasets = [
   // RISK FACTORS
   {
     "nodes" : [ {
+      "data" : {
+        "id" : "41882",
+        "shared_name" : "Node 3",
+        "name" : "Node\nDegree",
+        "SUID" : 41882,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -297.8998313026389,
+        "y" : -55.68465002029137
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "41877",
+        "shared_name" : "Node 2",
+        "name" : "39\n\n\n\n\n\n\n\n\n0",
+        "SUID" : 41877,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -331.8828597593435,
+        "y" : 43.37591626413282
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "41872",
+        "shared_name" : "Node 1",
+        "SUID" : 41872,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -299.85674810409546,
+        "y" : 43.07438921928406
+      },
+      "selected" : false
+    }, {
       "data" : {
         "id" : "8497",
         "shared_name" : "MH18SURG",
@@ -89410,6 +89724,37 @@ var datasets = [
         "content" : "data(name)"
       }
     }, {
+      "selector" : "node[ id = '41872' ]",
+      "css" : {
+        'background-gradient-stop-colors': 'rgb(109,112,4) rgb(255,255,255)',
+        'background-gradient-direction': 'to-bottom',
+        'background-fill': 'linear-gradient',
+        "border-color" : "rgb(255,255,255)",
+        "height" : 150.0,
+        "width" : 30.0,
+        "shape" : "rectangle"
+      }
+    }, {
+      "selector" : "node[ id = '41877' ]",
+      "css" : {
+        "background-color" : "rgb(255,255,255)",
+        "border-color" : "rgb(255,255,255)",
+        "font-size" : 15,
+        "font-weight" : "normal",
+        "height" : 150.0,
+        "width" : 30.0,
+        "shape" : "rectangle"
+      }
+    }, {
+      "selector" : "node[ id = '41882' ]",
+      "css" : {
+        "background-color" : "rgb(255,255,255)",
+        "border-color" : "rgb(255,255,255)",
+        "font-size" : 15,
+        "font-weight" : "normal",
+        "shape" : "rectangle"
+      }
+    }, {
       "selector" : "node:selected",
       "css" : {
         "background-color" : "rgb(255,255,0)"
@@ -89445,6 +89790,44 @@ var datasets = [
   // PHENOTYPE
   {
     "nodes" : [ {
+      "data" : {
+        "id" : "41882",
+        "shared_name" : "Node 3",
+        "name" : "Node\nDegree",
+        "SUID" : 41882,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -137.8998313026389,
+        "y" : -57.68465002029137
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "41877",
+        "shared_name" : "Node 2",
+        "name" : "11\n\n\n\n\n\n\n\n\n\n\n0",
+        "SUID" : 41877,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -155.8828597593435,
+        "y" : 3.37591626413282
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "41872",
+        "shared_name" : "Node 1",
+        "SUID" : 41872,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -139.85674810409546,
+        "y" : 3.07438921928406
+      },
+      "selected" : false
+    }, {
       "data" : {
         "id" : "9879",
         "shared_name" : "MMSE",
@@ -90757,6 +91140,37 @@ var datasets = [
         "content" : "data(name)"
       }
     }, {
+      "selector" : "node[ id = '41872' ]",
+      "css" : {
+        'background-gradient-stop-colors': 'rgb(87,87,220) rgb(255,255,255)',
+        'background-gradient-direction': 'to-bottom',
+        'background-fill': 'linear-gradient',
+        "border-color" : "rgb(255,255,255)",
+        "height" : 100.0,
+        "width" : 20.0,
+        "shape" : "rectangle"
+      }
+    }, {
+      "selector" : "node[ id = '41877' ]",
+      "css" : {
+        "background-color" : "rgb(255,255,255)",
+        "border-color" : "rgb(255,255,255)",
+        "font-size" : 8,
+        "font-weight" : "normal",
+        "height" : 100.0,
+        "width" : 20.0,
+        "shape" : "rectangle"
+      }
+    }, {
+      "selector" : "node[ id = '41882' ]",
+      "css" : {
+        "background-color" : "rgb(255,255,255)",
+        "border-color" : "rgb(255,255,255)",
+        "font-size" : 8,
+        "font-weight" : "normal",
+        "shape" : "rectangle"
+      }
+    }, {
       "selector" : "node:selected",
       "css" : {
         "background-color" : "rgb(255,255,0)"
@@ -90813,16 +91227,6 @@ var layouts = [
     animate: true
   }
 ]
-
-// Define the legend
-var legend = document.createElement('div');
-legend.id = 'legend';
-legend.style.position = 'absolute';
-legend.style.top = '10px';
-legend.style.right = '10px';
-legend.style.width = '20px';
-legend.style.height = '150px';
-legend.style.background = 'linear-gradient(to bottom, #000 0%, #ccc 100%)';
 
 // Set the initial conditions to display
 var currentDataset = 0;
@@ -90899,7 +91303,6 @@ function loadDataset(index, index_layout) {
     var layout = layouts[index_layout];
     cy.layout(layout).run();
   }
-  cy.container().appendChild(legend);
   return cy;
 }
 
