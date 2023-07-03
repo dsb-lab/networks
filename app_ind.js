@@ -91205,6 +91205,9 @@ var datasets = [
   }
 ]
 
+// Establece la opción "locked" en los nodos que deseas mantener en su posición inicial
+var lockedNodes = ['41882', '41877', '41872'];
+
 // Define the layouts
 var layouts = [
   {
@@ -91301,6 +91304,14 @@ function loadDataset(index, index_layout) {
     cy.fit();
   } else {
     var layout = layouts[index_layout];
+    if (lockedNodes.length > 0){
+      cy.nodes().forEach(function(node) {
+        var id = node.id();
+        if (lockedNodes.includes(id)) {
+          node.remove();
+        }
+      });
+    }
     cy.layout(layout).run();
   }
   return cy;
